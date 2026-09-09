@@ -1,0 +1,54 @@
+MUBIO07 - Actividad 1: Conceptos fundamentales de Python
+Solución preparada para Rubén Juárez Cádiz
+
+ENTREGA PRINCIPAL
+-----------------
+actividad1_resuelta_ruben_juarez.py
+
+El script espera encontrar en su misma carpeta:
+- 1tup.pdb
+- actividad.csv
+- ciudades.tsv
+
+Al ejecutarlo crea la carpeta resultados/ con:
+- frecuencia_aminoacidos_p53.png
+- pulsaciones_tiempo_por_actividad_y_dieta.png
+- actividad_con_ciudades.csv
+- resumen_pulsaciones_por_actividad.csv
+
+RESULTADOS VERIFICADOS
+----------------------
+PDB 1TUP
+TITLE: TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA
+AUTHOR: Y.CHO,S.GORINA,P.D.JEFFREY,N.P.PAVLETICH
+Longitud p53, cadena A: 219 aminoácidos
+Cadenas A/B/C: secuencia idéntica
+
+Frecuencias (cadena A):
+SER 20, ARG 19, PRO 18, LEU 16, THR 16, GLY 15, VAL 15, GLU 13,
+ASN 11, CYS 10, HIS 9, ALA 8, ASP 8, LYS 8, TYR 8, GLN 7,
+ILE 6, MET 6, PHE 5, TRP 1.
+Total = 219.
+
+DATOS DE ACTIVIDAD
+Filas: 90
+Valores vacíos: 0
+Dietas: low fat = 45; no fat = 45
+Actividades: rest = 30; walking = 30; running = 30
+
+Pulsaciones por actividad (media; desviación estándar):
+rest: 90.833; 5.831
+walking: 95.200; 6.779
+running: 113.067; 17.620
+
+Merge con ciudades: 90 filas, 0 ciudades faltantes.
+Ciudades: Mollina, Cartagena, Palma, Merida, Valencia, Barcelona.
+
+NOTA METODOLÓGICA
+-----------------
+El enunciado habla de dos CSV, pero el segundo fichero entregado es ciudades.tsv.
+Por ello el código lo lee correctamente con separador de tabulación (sep='\\t').
+
+Para p53 se utiliza una sola copia proteica (cadena A), porque 1TUP contiene tres
+cadenas p53 (A, B y C) con la misma secuencia. Sumar las tres triplicaría las
+frecuencias sin aportar una nueva secuencia biológica.

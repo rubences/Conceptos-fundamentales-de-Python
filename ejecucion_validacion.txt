@@ -1,0 +1,79 @@
+===============================================================================
+2. MANIPULACIÓN DEL FICHERO PDB 1TUP
+===============================================================================
+2.A - TITLE: TUMOR SUPPRESSOR P53 COMPLEXED WITH DNA
+2.A - AUTHOR: Y.CHO,S.GORINA,P.D.JEFFREY,N.P.PAVLETICH
+
+2.B - Longitud de la secuencia de p53 (cadena A): 219
+Primeros 20 aminoácidos: ['SER', 'SER', 'SER', 'VAL', 'PRO', 'SER', 'GLN', 'LYS', 'THR', 'TYR', 'GLN', 'GLY', 'SER', 'TYR', 'GLY', 'PHE', 'ARG', 'LEU', 'GLY', 'PHE']
+Cadenas A, B y C idénticas: True
+
+2.C - Conteo de aminoácidos:
+  SER: 20
+  ARG: 19
+  PRO: 18
+  LEU: 16
+  THR: 16
+  GLY: 15
+  VAL: 15
+  GLU: 13
+  ASN: 11
+  CYS: 10
+  HIS: 9
+  ALA: 8
+  ASP: 8
+  LYS: 8
+  TYR: 8
+  GLN: 7
+  ILE: 6
+  MET: 6
+  PHE: 5
+  TRP: 1
+Total comprobado: 219
+
+2.D - Gráfico guardado en: /mnt/data/mubio07_act1/resultados/frecuencia_aminoacidos_p53.png
+
+===============================================================================
+3.A - DATOS DE ACTIVIDAD Y RENOMBRADO DE COLUMNAS
+===============================================================================
+Dimensiones iniciales: 90 filas x 5 columnas
+Columnas: ['id', 'dieta', 'pulsaciones', 'tiempo', 'actividad']
+
+3.B - Celdas vacías por columna:
+id             0
+dieta          0
+pulsaciones    0
+tiempo         0
+actividad      0
+Filas eliminadas por contener valores vacíos: 0
+
+3.C - Niveles de dieta y frecuencia (value_counts):
+Número de niveles: 2
+dieta
+low fat    45
+no fat     45
+
+3.D - Agrupación por nivel de actividad:
+Número de elementos de la lista: 3
+Hay tres elementos porque la variable 'actividad' tiene tres niveles: rest, walking, running.
+Cada elemento es una tupla (nombre_del_grupo, DataFrame_del_grupo). Tamaños de los grupos:
+  - 'rest': 30 filas
+  - 'walking': 30 filas
+  - 'running': 30 filas
+
+3.E - Frecuencia cardíaca media y desviación estándar por actividad:
+           pulsaciones_media  pulsaciones_desviacion_estandar
+actividad                                                    
+rest                  90.833                            5.831
+walking               95.200                            6.779
+running              113.067                           17.620
+
+3.F - Merge con ciudades:
+Dimensiones tras el merge: (90, 6)
+Ciudades incorporadas: Mollina, Cartagena, Palma, Merida, Valencia, Barcelona
+
+3.G - Figura multifacetada guardada en: /mnt/data/mubio07_act1/resultados/pulsaciones_tiempo_por_actividad_y_dieta.png
+
+===============================================================================
+ACTIVIDAD COMPLETADA CORRECTAMENTE
+===============================================================================
